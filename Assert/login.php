@@ -28,7 +28,10 @@
                 background-image: linear-gradient(var(--div-color5),var(--div-color1));
             }
             img{
-                width: 60%;
+                width: 30%;
+                position: absolute;
+                top: 49%;
+                left: 15%;
             }
             .side2{
                 width: 70%;
@@ -37,14 +40,21 @@
             .menu{
                 display: flex;
                 flex-direction: row;
+                justify-content: center;
                 align-items: center;
                 text-align: center;
+                width: 100%;
             }
             .menu h2{
                 color: var(--div-color4);
                 font-size: 30px;
-                width: 100%;
+                border-radius: 16px;
+                margin-left: 8rem;
                 font-family: 'Roboto', sans-serif;
+                cursor: pointer;
+            }
+            #m1{
+                margin-left: 0;
             }
             .side2 h1{
                 text-align: center;
@@ -77,6 +87,19 @@
                 height: 50px;
                 border: none;
                 border-radius: 10px;
+                font-size: 20px;
+                color: var(--div-color1);
+                outline: none;
+            }
+            #btn{
+                margin-top: 2.5rem;
+                font-family: 'Roboto', sans-serif;
+                font-size: 45px;
+                color: var(--div-color5);
+                border: none;
+                border-radius: 16px;
+                cursor: pointer;
+                transition: 0.6s;
             }
             
 
@@ -99,16 +122,63 @@
                     <form method="POST" action="login.php">
                         <div class="row1">
                             <label>Username</label>
-                            <input type="text" name="username">
+                            <input type="text" name="username" id="user">
                         </div>
                         <div class="row2">
                             <label>Password</label>
-                            <input type="text" name="password">
+                            <input type="text" name="password" id="pass">
                         </div>
-                        <label type="submit">loging</label>
+                        <button type="submit" id="btn">loging</button>
                     </form>
                 </div>
             </div>
         </main>
+        <script>
+            var M1=document.getElementById("m1");
+            var M2=document.getElementById("m2");
+            var M3=document.getElementById("m3");
+            var M4=document.getElementById("m4");
+            var U=document.getElementById("user");
+            var P=document.getElementById("pass");
+            var BTN=document.getElementById("btn");
+
+            M1.onmousemove=function(){
+                M1.style.backgroundColor="var(--div-color5)";
+            }
+             M1.onmouseleave=function(){
+                M1.style.backgroundColor="var(--div-color3)";
+            }
+             M2.onmousemove=function(){
+                M2.style.backgroundColor="var(--div-color5)";
+            }
+             M2.onmouseleave=function(){
+                M2.style.backgroundColor="var(--div-color3)";
+            }
+            M3.onmousemove=function(){
+                M3.style.backgroundColor="var(--div-color5)";
+            }
+             M3.onmouseleave=function(){
+                M3.style.backgroundColor="var(--div-color3)";
+            }
+            M4.onmousemove=function(){
+                M4.style.backgroundColor="var(--div-color5)";
+            }
+             M4.onmouseleave=function(){
+                M4.style.backgroundColor="var(--div-color3)";
+            }
+            BTN.onmousemove=function(){
+                BTN.style.backgroundColor="#FF8000";
+            }
+             BTN.onmouseleave=function(){
+                BTN.style.backgroundColor="white";
+            }
+
+            BTN.onclick=function(){
+                if(U.value==empty){
+                    U.style.borderColor="red";
+                }
+            }
+
+        </script>
     </body>
 </html>
