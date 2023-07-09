@@ -17,6 +17,7 @@
             body{
                 margin: 0;
                 padding: 0;
+                overflow: hidden;
             }
             .container-login{
                 display: flex;
@@ -58,7 +59,7 @@
             }
             .side2 h1{
                 text-align: center;
-                font-size: 40px;
+                font-size: 45px;
                 color: var(--div-color1);
                 font-family: 'Roboto', sans-serif;
             }
@@ -78,7 +79,7 @@
             label{
                 font-family: 'Roboto', sans-serif;
                 font-size: 28px;
-                margin-top: 2.5rem;
+                margin-top: 2.3rem;
                 color: var(--div-color1);
             }
             input{
@@ -86,6 +87,7 @@
                 width: 300px;
                 height: 50px;
                 border: none;
+                border-color: var(--div-color4);
                 border-radius: 10px;
                 font-size: 20px;
                 color: var(--div-color1);
@@ -100,6 +102,14 @@
                 border-radius: 16px;
                 cursor: pointer;
                 transition: 0.6s;
+            }
+            h3{
+                margin-top: 0;
+                margin-bottom: 0;
+                font-family: 'Roboto', sans-serif;
+                color: red;
+                font-size: 14px;
+                display: none;
             }
             
 
@@ -123,12 +133,14 @@
                         <div class="row1">
                             <label>Username</label>
                             <input type="text" name="username" id="user">
+                            <h3 id="e1">Can't empty Username</h3>
                         </div>
                         <div class="row2">
                             <label>Password</label>
                             <input type="text" name="password" id="pass">
+                            <h3 id="e2">Can't empty password </h3>
                         </div>
-                        <button type="submit" id="btn">loging</button>
+                        <button id="btn" type="button">Loging</button>
                     </form>
                 </div>
             </div>
@@ -141,6 +153,8 @@
             var U=document.getElementById("user");
             var P=document.getElementById("pass");
             var BTN=document.getElementById("btn");
+            var E1=document.getElementById("e1");
+            var E2=document.getElementById("e2");
 
             M1.onmousemove=function(){
                 M1.style.backgroundColor="var(--div-color5)";
@@ -174,10 +188,20 @@
             }
 
             BTN.onclick=function(){
-                if(U.value==empty){
-                    U.style.borderColor="red";
+                if(U.value=="" && P.value==""){
+                    E1.style.display="block";
+                    E2.style.display="block";
+                }
+                else if(P.value==""){
+                    E2.style.display="block";
+                }
+                else if(U.value==""){
+                    E1.style.display="block";
                 }
             }
+                
+                
+        
 
         </script>
     </body>
