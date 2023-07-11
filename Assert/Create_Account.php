@@ -3,6 +3,7 @@
     <head>
         <title>ATOM BANK</title>
         <style>
+              @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
             :root{
                 --div-color1:#5680E9;
