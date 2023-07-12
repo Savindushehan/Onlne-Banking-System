@@ -19,10 +19,15 @@
                 overflow: hidden;
             }
             main{
+                width: 100%;
+                height: 100vh;
+            }
+            .background1{
                 display: flex;
                 flex-direction: row;
                 width: 100%;
                 height: 100vh;
+                display: none;
             }
             .side1{
                 width: 30%;
@@ -85,11 +90,52 @@
                 padding-top: 8vh;
                 padding-bottom: 8vh;
             }
+            .background2{
+                width: 100%;
+                height: 100vh;
+                display: flex;
+                flex-direction: row;
+            }
+            .background2 .details{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            }
+            .background2 h1{
+                 font-family: 'Roboto', sans-serif;
+                 font-size: 45px;
+                color: var(--div-color5);
+            }
+            .background2 form{
+                display: flex;
+                flex-direction: column;
+            }
+            form label{
+                  font-family: 'Roboto', sans-serif;
+                  font-size: 30px;  
+            }
+            form #title{
+                margin-top: 1rem;
+                width: 500px;
+                height: 50px;
+                margin-bottom: 3rem;
+            }
+            form #description{
+                margin-top: 1rem;
+                width: 500px;
+                height: 200px;
+            }
+            #btn1{
+                margin-top: 3rem
+                
+            }
 
         </style>
     </head>
     <body>
         <main>
+            <div class="background1">
         <div class="side1">
             <img src="../Images in saly/Saly-45.png" alt="image">
         </div>
@@ -113,6 +159,31 @@
                     <span id="e6">View inquiry</span>
                 </div>
             </div>
+            </div>
+            </div>
+            <div class="background2">
+                <div class="side1">
+                    <img src="../Images in saly/Saly-9.png" alt="image">
+                </div>
+                <div class="side2">
+                <div class="menu">
+                <h2 id="m1">ATOM</h2>
+                <h2 id="m2">Home</h2>
+                <h2 id="m3">Contact Us</h2>
+                <h2 id="m4">About Us</h2>
+                <h2 id="m5">Log Out</h2>
+                </div>
+                <div class="details">
+                    <h1>Inquiry</h1>
+                    <form method="POST" action="Userdashboard.php">
+                        <label>Inquiry Title</label>
+                        <input type="text" name="title" id="title">
+                        <label>Inquiry Description</label>
+                        <input type="text" name="description" id="description">
+                    </form>
+                    <button type="button" id="btn1">Submit</button>
+                </div>
+                </div>
             </div>
         </main>
         <script>
