@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>ATOM BANK</title>
         <style>
             @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
@@ -13,7 +15,95 @@
                --div-color4:#C1C8E4;
                --div-color5:#8860D0;
            }
+           @media only screen and (max-width:1279px){
+            body{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                width: 20rem;
+                margin: 0;
+                padding: 0;
+                margin-left: auto;
+                margin-right: auto;
+                overflow-x: hidden;
+            }
+            main{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+            }
+            .side1{
+                width: 20rem;
+                display: none;
+            }
+            .side2{
+                width: 20rem;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                background-image: linear-gradient(var(--div-color3),var(--div-color2));
+            }
+            .menu{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+                width: 100%;
+            }
+             .menu h2{
+                margin-top: 0;
+                display: none;
+                color: var(--div-color4);
+                font-size: 25px;
+                width: 20rem;
+                border-radius: 10px;
+                font-family: 'Roboto', sans-serif;
+                cursor: pointer;
+            }
+            .details{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            }
+             h1{
+                font-family: 'Roboto', sans-serif;
+                font-size: 40px;
+                color: var(--div-color1);
+            }
+            p{
+                font-family: 'Roboto', sans-serif;
+                text-align: center;
+                line-height: 25px;
+                margin-left: 1rem;
+                margin-right: 1rem;
+                font-size: 20px;
+            }
+             #m4{
+               background-color: orangered;
+            }
+            .three{
+                margin-top: 1rem;
+                display: flex;
+                flex-direction: column;
+                margin-left:15rem ;
+                cursor: pointer;
+            }
+            h4{
+                text-align: right;
+                margin-top: 0;
+                margin-bottom: 5px;
+                width: 4rem;
+                height: 0.5rem;
+                background-color:var(--div-color4);
+            }
+           }
 
+           @media only screen and (min-width:1280px){
            body{
                margin: 0;
                padding: 0;
@@ -44,6 +134,7 @@
            }
            .menu{
                display: flex;
+               margin-bottom: 0;
                flex-direction: row;
                justify-content: center;
                align-items: center;
@@ -51,6 +142,7 @@
                width: 100%;
            }
            .menu h2{
+            margin-top: 2vh;
                color: var(--div-color4);
                font-size: 30px;
                border-radius: 16px;
@@ -71,15 +163,20 @@
                 font-family: 'Roboto', sans-serif;
                 font-size: 35px;
                 color: var(--div-color1);
+                margin-bottom: 2vh;
             }
             p{
                 font-family: 'Roboto', sans-serif;
-                margin-left: 5rem;
-                margin-right: 5rem;
+                margin-left: 5vw;
+                margin-right: 5vw;
                 text-align: center;
-                line-height: 35px;
+                line-height: 5vh;
                 font-size: 20px;
             }
+            .three{
+                display: none;
+            }
+        }
 
            </style>
     </head>
@@ -89,6 +186,11 @@
                 <img src="../Images in saly/Saly-99.png" alt="image">
             </div>
             <div class="side2">
+                <div class="three" id="three">
+                    <h4></h4>
+                    <h4></h4>
+                    <h4></h4>
+                </div>
                 <div class="menu">
                     <h2 id="m1">ATOM</h2>
                     <h2 id="m2">Home</h2>
@@ -120,16 +222,7 @@
                         
                         Security Concerns:
                         If you suspect any fraudulent activity or have security concerns regarding your account, please report it immediately to our security team at security@ATOMbank.com. Your security is our top priority, and we will take immediate action to investigate and resolve any issues.
-                        
-                        Address:
-                        ATOM
-                        123 Main Street
-                        City, State, ZIP Code
-                        Country
-                        
-                        We are dedicated to providing excellent customer service, and we strive to respond to all inquiries promptly. Please allow up to 24 hours for a response during our regular business hours.
-                        
-                        Thank you for choosing ATOM. We appreciate your trust and look forward to serving you</p>
+                    </p>
                 </div>
             </div>
         </main>
@@ -143,6 +236,8 @@
             var BTN=document.getElementById("btn");
             var E1=document.getElementById("e1");
             var E2=document.getElementById("e2");
+            var B=document.getElementById("three");
+
 
             M1.onmousemove=function(){
                 M1.style.backgroundColor="var(--div-color5)";
@@ -161,6 +256,13 @@
             }
              M4.onmouseleave=function(){
                 M4.style.backgroundColor="var(--div-color3)";
+            }
+
+            B.onclick = function(){
+                M1.style.display="block";
+                M2.style.display="block";
+                M3.style.display="block";
+                M4.style.display="block";
             }
 
             </script>
