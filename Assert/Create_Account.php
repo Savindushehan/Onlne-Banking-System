@@ -165,7 +165,7 @@
             img{
                 width: 30%;
                 position: absolute;
-                top: 49%;
+                bottom: 0;
                 left: 15%;
             }
             .side2{
@@ -176,6 +176,7 @@
                 background-image: linear-gradient(var(--div-color3),var(--div-color2));
             }
              .menu{
+                margin-bottom: 2vh;
                 display: flex;
                 flex-direction: row;
                 justify-content: center;
@@ -195,6 +196,8 @@
                 margin-left: 0;
             }
              .side2 h1{
+                margin-top: 0;
+                margin-bottom: 2vh;
                 text-align: center;
                 font-size: 45px;
                 color: var(--div-color1);
@@ -202,6 +205,8 @@
             }
             form{
                 width: 60%;
+                margin-top: 0;
+                margin-bottom: 2vh;
                 display: flex;
                 align-items: center;
                 justify-content: center;
@@ -212,8 +217,10 @@
             .row1,.row2{
                 display: flex;
                 flex-direction: row;
+                margin-top: 0;
             }
             .row3{
+                margin-top: 0;
                 display: flex;
                 flex-direction: column;
             }
@@ -225,12 +232,12 @@
             label{
                 font-family: 'Roboto', sans-serif;
                 font-size: 28px;
-                margin-top: 2.3rem;
+                margin-bottom: 2vh;
                 color: var(--div-color1);
             }
             input{
-                margin-top: 1rem;
                 width: 300px;
+                margin-bottom: 3vh;
                 height: 50px;
                 border: none;
                 border-color: var(--div-color4);
@@ -240,7 +247,6 @@
                 outline: none;
             }
             #btn{
-                margin-top: 2.5rem;
                 font-family: 'Roboto', sans-serif;
                 font-size: 45px;
                 color: var(--div-color5);
