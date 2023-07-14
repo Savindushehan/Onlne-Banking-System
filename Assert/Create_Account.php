@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>ATOM BANK</title>
         <style>
               @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
@@ -12,7 +14,139 @@
                 --div-color4:#C1C8E4;
                 --div-color5:#8860D0;
             }
+            @media only screen and (max-width:1279px){
+                body{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                width: 20rem;
+                margin: 0;
+                padding: 0;
+                margin-left: auto;
+                margin-right: auto;
+                overflow-x: hidden;
+            }
+            main{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+            }
+            .side1{
+                width: 20rem;
+                display: none;
+            }
+            .side2{
+                width: 20rem;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                background-image: linear-gradient(var(--div-color3),var(--div-color2));
+            }
+            .menu{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+                width: 100%;
+            }
+             .menu h2{
+                margin-top: 0;
+                display: none;
+                color: var(--div-color4);
+                font-size: 25px;
+                width: 20rem;
+                border-radius: 10px;
+                font-family: 'Roboto', sans-serif;
+                cursor: pointer;
+            }
+            .three{
+                margin-top: 1rem;
+                display: flex;
+                flex-direction: column;
+                margin-left:15rem ;
+                cursor: pointer;
+            }
+            h4{
+                text-align: right;
+                margin-top: 0;
+                margin-bottom: 5px;
+                width: 4rem;
+                height: 0.5rem;
+                background-color:var(--div-color4);
+            }
+             .side2 h1{
+                text-align: center;
+                font-size: 32px;
+                color: var(--div-color1);
+                font-family: 'Roboto', sans-serif;
+            }
+            form{
+                width: 60%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+            }
+            form .row1,form .row2{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            }
+            .row3{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            }
+             .R1,.R2,.R3,.R4{
+                display: flex;
+                flex-direction: column;
+                 justify-content: center;
+                align-items: center;
+            }
+             label{
+                font-family: 'Roboto', sans-serif;
+                font-size: 28px;
+                margin-top: 2.3rem;
+                color: var(--div-color1);
+            }
+            input{
+                margin-top: 1rem;
+                width: 17rempx;
+                height: 40px;
+                border: none;
+                border-color: var(--div-color4);
+                border-radius: 10px;
+                font-size: 20px;
+                color: var(--div-color1);
+                outline: none;
+            }
+             #btn{
+                margin-top: 2.5rem;
+                font-family: 'Roboto', sans-serif;
+                font-size: 45px;
+                color: var(--div-color5);
+                border: none;
+                border-radius: 16px;
+                cursor: pointer;
+                transition: 0.6s;
+            }
+            h3{
+                margin-top: 0;
+                margin-bottom: 0;
+                font-family: 'Roboto', sans-serif;
+                color: red;
+                font-size: 14px;
+                display: none;
+            }
+            }
 
+            @media only screen and (min-width:1280px){
             body{
                 margin: 0;
                 padding: 0;
@@ -123,8 +257,7 @@
                 font-size: 14px;
                 display: none;
             }
-
-
+        }
 
         </style>
     </head>
@@ -134,6 +267,11 @@
                 <img src="../Images in saly/Saly-12.png" alt="image">
             </div>
             <div class="side2">
+            <div class="three" id="three">
+                    <h4></h4>
+                    <h4></h4>
+                    <h4></h4>
+                </div>
                 <div class="menu">
                     <h2 id="m1">ATOM</h2>
                     <h2 id="m2">Home</h2>
@@ -194,6 +332,7 @@
             var P4=document.getElementById("e4");
             var P5=document.getElementById("e5");
             var pattern=/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+            var B=document.getElementById("three");
 
             M1.onmousemove=function(){
                 M1.style.backgroundColor="var(--div-color5)";
@@ -225,6 +364,10 @@
             BTN.onmouseleave=function(){
                 BTN.style.backgroundColor="white";
             }
+
+
+
+
             BTN.onclick=function(){
                 if(E2.value=="" && E3.value=="" && E4.value=="" && E5.value=="" && E1.value==""){
                 P1.style.display="block";    
@@ -301,10 +444,21 @@
               else if(!email.value.match(pattern)){
                 alert("Invalid Email !");
               }
-              
-
-                
+               
             }
+            B.onclick = function() {
+                if (M1.style.display === "none") {
+                M1.style.display = "block";
+                M2.style.display = "block";
+                M3.style.display = "block";
+                M4.style.display = "block";
+                } else {
+                M1.style.display = "none";
+                M2.style.display = "none";
+                M3.style.display = "none";
+                M4.style.display = "none";
+                }
+  }
 
 
 
