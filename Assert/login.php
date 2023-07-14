@@ -159,7 +159,7 @@
             img{
                 width: 30%;
                 position: absolute;
-                top: 49%;
+                bottom: 0;
                 left: 15%;
             }
             .side2{
@@ -167,6 +167,7 @@
                 background-image: linear-gradient(var(--div-color3),var(--div-color2));
             }
             .menu{
+                margin-bottom: 4vh;
                 display: flex;
                 flex-direction: row;
                 justify-content: center;
