@@ -83,9 +83,9 @@
                 margin-right: 1rem;
                 font-size: 20px;
             }
-             #m4{
-               background-color: orangered;
-            }
+            #m3{
+              background-color: orangered;
+           }
             .three{
                 margin-top: 1rem;
                 display: flex;
@@ -258,11 +258,18 @@
                 M4.style.backgroundColor="var(--div-color3)";
             }
 
-            B.onclick = function(){
-                M1.style.display="block";
-                M2.style.display="block";
-                M3.style.display="block";
-                M4.style.display="block";
+            B.onclick = function() {
+                if (M1.style.display === "none") {
+                M1.style.display = "block";
+                M2.style.display = "block";
+                M3.style.display = "block";
+                M4.style.display = "block";
+                } else {
+                M1.style.display = "none";
+                M2.style.display = "none";
+                M3.style.display = "none";
+                M4.style.display = "none";
+                }
             }
 
             </script>
