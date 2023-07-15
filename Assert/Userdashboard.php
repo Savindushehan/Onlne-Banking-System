@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>ATOM BANK</title>
         <style>
               @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
@@ -12,12 +14,17 @@
                 --div-color4:#C1C8E4;
                 --div-color5:#8860D0;
             }
-
             body{
                 margin: 0;
                 padding: 0;
-                overflow: hidden;
+               
             }
+
+            @media only screen and (min-width:1280px){
+                /* this is userdashboad*/
+           .back1{
+            display: none;
+           }
             main{
                 width: 100%;
                 height: 100vh;
@@ -27,7 +34,7 @@
                 flex-direction: row;
                 width: 100%;
                 height: 100vh;
-                display: none;
+                
             }
             .side1{
                 width: 30%;
@@ -36,8 +43,8 @@
             img{
                 width: 30%;
                 position: absolute;
-                top: 49%;
-                left: 15%;
+                bottom: 0;
+                left: 15.5%;
             }
             .side2{
                 width: 70%;
@@ -55,7 +62,7 @@
                 color: var(--div-color4);
                 font-size: 30px;
                 border-radius: 16px;
-                margin-left: 8rem;
+                margin-left: 6vw;
                 font-family: 'Roboto', sans-serif;
                 cursor: pointer;
             }
@@ -69,8 +76,8 @@
                 
             }
             .row1,.row2{
-                margin-top: 5%;
-                margin-bottom: 5%;
+                margin-top: 10vh;
+                margin-bottom: 10vh;
                 display: flex;
                 flex-direction: row;
                 align-items: center;
@@ -90,11 +97,26 @@
                 padding-top: 8vh;
                 padding-bottom: 8vh;
             }
+        }
+        @media only screen and (min-width:1280px){
+           /* this is add inquiry*/
+            .back2{
+                display: block;
+            }
             .background2{
                 width: 100%;
                 height: 100vh;
                 display: flex;
                 flex-direction: row;
+            }
+            .menu{
+                margin-bottom: 1vh;
+            }
+            img{
+                width: 30%;
+                position: absolute;
+                bottom: 0;
+                left: 14%;
             }
             .background2 .details{
                 display: flex;
@@ -103,49 +125,72 @@
                 align-items: center;
             }
             .background2 h1{
+                margin-top: 0;
                  font-family: 'Roboto', sans-serif;
                  font-size: 45px;
                 color: var(--div-color5);
+                margin-bottom: 2vh;
             }
             .background2 form{
                 display: flex;
                 flex-direction: column;
             }
             form label{
+                margin-top: 3vh;
                   font-family: 'Roboto', sans-serif;
-                  font-size: 30px;  
+                  font-size: 30px; 
             }
             form #title{
                 margin-top: 1rem;
-                width: 500px;
-                height: 50px;
-                margin-bottom: 3rem;
+                border-radius: 0.5vw;
+                margin-bottom: 0;
+                width: 40vw;
+                height: 5vh;
+                outline: none;
+                border: none;
+            }
+            h3{
+                display: none;
+                margin-top: 0;
+                font-family: 'Roboto', sans-serif;
+                color: red;
             }
             form #description{
                 margin-top: 1rem;
-                width: 500px;
-                height: 200px;
+                width: 40vw;
+                border-radius: 1vw;
+                height: 15vh;
+                outline: none;
+                border: none;
             }
             #btn1{
-                margin-top: 3rem
-                
+                margin-top: 2.5rem;
+                font-family: 'Roboto', sans-serif;
+                font-size: 45px;
+                color: var(--div-color5);
+                border: none;
+                border-radius: 16px;
+                cursor: pointer;
+                transition: 0.6s;
             }
+        }
 
         </style>
     </head>
     <body>
         <main>
+            <div class="back1">
             <div class="background1">
         <div class="side1">
-            <img src="../Images in saly/Saly-45.png" alt="image">
+            <img src="../Images in saly/Saly-41.png" alt="image">
         </div>
             <div class="side2">
             <div class="menu">
-                <h2 id="m1">ATOM</h2>
-                <h2 id="m2">Home</h2>
-                <h2 id="m3">Contact Us</h2>
-                <h2 id="m4">About Us</h2>
-                <h2 id="m5">Log Out</h2>
+                <h2 id="m6">ATOM</h2>
+                <h2 id="m7">Home</h2>
+                <h2 id="m8">Contact Us</h2>
+                <h2 id="m9">About Us</h2>
+                <h2 id="m10">Log Out</h2>
             </div>
             <div class="details">
                 <div class="row1">
@@ -161,6 +206,8 @@
             </div>
             </div>
             </div>
+    </div>
+            <div class="back2">
             <div class="background2">
                 <div class="side1">
                     <img src="../Images in saly/Saly-9.png" alt="image">
@@ -178,13 +225,16 @@
                     <form method="POST" action="Userdashboard.php">
                         <label>Inquiry Title</label>
                         <input type="text" name="title" id="title">
+                        <h3 id="Ie1">Can't Empty Title</h3>
                         <label>Inquiry Description</label>
                         <input type="text" name="description" id="description">
+                        <h3 id="Ie2">Can't Empty Description</h3>
                     </form>
                     <button type="button" id="btn1">Submit</button>
                 </div>
                 </div>
             </div>
+    </div>
         </main>
         <script>
             var M1=document.getElementById("m1");
@@ -192,13 +242,20 @@
             var M3=document.getElementById("m3");
             var M4=document.getElementById("m4");
             var M5=document.getElementById("m5");
+            var M6=document.getElementById("m6");
+            var M7=document.getElementById("m7");
+            var M8=document.getElementById("m8");
+            var M9=document.getElementById("m9");
+            var M10=document.getElementById("m10");
             var E1=document.getElementById("e1");
             var E2=document.getElementById("e2");
             var E3=document.getElementById("e3");
             var E4=document.getElementById("e4");
             var E5=document.getElementById("e5");
             var E6=document.getElementById("e6");
-
+            var BTN1=document.getElementById("btn1");
+            var IE1=document.getElementById("Ie1");
+            var IE2=document.getElementById("Ie2");
 
             M1.onmousemove=function(){
                 M1.style.backgroundColor="var(--div-color5)";
@@ -229,6 +286,53 @@
             }
              M5.onmouseleave=function(){
                 M5.style.backgroundColor="var(--div-color3)";
+            }
+            M6.onmousemove=function(){
+                M6.style.backgroundColor="var(--div-color5)";
+            }
+             M6.onmouseleave=function(){
+                M6.style.backgroundColor="var(--div-color3)";
+            }
+             M7.onmousemove=function(){
+                M7.style.backgroundColor="var(--div-color5)";
+            }
+             M7.onmouseleave=function(){
+                M7.style.backgroundColor="var(--div-color3)";
+            }
+            M8.onmousemove=function(){
+                M8.style.backgroundColor="var(--div-color5)";
+            }
+             M8.onmouseleave=function(){
+                M8.style.backgroundColor="var(--div-color3)";
+            }
+            M9.onmousemove=function(){
+                M9.style.backgroundColor="var(--div-color5)";
+            }
+             M9.onmouseleave=function(){
+                M9.style.backgroundColor="var(--div-color3)";
+            }
+            M10.onmousemove=function(){
+                M10.style.backgroundColor="var(--div-color5)";
+            }
+             M10.onmouseleave=function(){
+                M10.style.backgroundColor="var(--div-color3)";
+            }
+            BTN1.onmousemove=function(){
+                BTN1.style.backgroundColor="#FF8000";
+            }
+             BTN1.onmouseleave=function(){
+                BTN1.style.backgroundColor="white";
+            }
+
+            BTN1.onclick = function() {
+                if (title.value == "" && description.value == "") {
+                    IE1.style.display = "block";
+                    IE2.style.display = "block";
+                } else if (title.value == "") {
+                    IE1.style.display = "block";
+                } else if (description.value == "") {
+                    IE2.style.display = "block";
+                }
             }
 
             E1.onmousemove=function(){
