@@ -101,7 +101,7 @@
         @media only screen and (min-width:1280px){
            /* this is add inquiry*/
             .back2{
-                display: block;
+                display: none;
             }
             .background2{
                 width: 100%;
@@ -163,6 +163,9 @@
                 outline: none;
                 border: none;
             }
+            #m6{
+                margin-left: 0;
+            }
             #btn1{
                 margin-top: 2.5rem;
                 font-family: 'Roboto', sans-serif;
@@ -174,6 +177,71 @@
                 transition: 0.6s;
             }
         }
+         @media only screen and (min-width:1280px){
+            /* create feedback*/
+            body{
+                margin: 0;
+                padding: 0;
+            }
+            .back3{
+                display: block;
+            }
+            .background3{
+                display: flex;
+                flex-direction: row;
+                width: 100%;
+                height: 100vh;
+            }
+            img{
+                width: 30%;
+                position: absolute;
+                bottom: 0;
+                left: 14%;
+            }
+            .details{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            }
+            .side2{
+                display: flex;
+                flex-direction: column;
+            }
+            h1{
+                 font-family: 'Roboto', sans-serif;
+                 text-align: center;
+                 font-size: 3rem;
+                 color: var(--div-color5);
+            }
+            input{
+                width:40vw;
+                height: 30vh;
+                margin-left: auto;
+                margin-right: auto;
+                outline: none;
+                border: none;
+                border-radius: 1vw;
+                color: var(--div-color3);
+            }
+              #btn2{
+                margin-left: auto;
+                margin-right: auto;
+                width: 12vw;
+                text-align: center;
+                margin-top: 2.5rem;
+                font-family: 'Roboto', sans-serif;
+                font-size: 45px;
+                color: var(--div-color5);
+                border: none;
+                border-radius: 16px;
+                cursor: pointer;
+                transition: 0.6s;
+            }
+            #m11{
+                margin-left: 0;
+            }
+         }
 
         </style>
     </head>
@@ -235,6 +303,28 @@
                 </div>
             </div>
     </div>
+    <div class="back3">
+        <div class="background3">
+            <div class="side1">
+                <img src="../Images in saly/Saly-25.png" alt="image">
+            </div>
+            <div class="side2">
+                <div class="menu">
+                <h2 id="m11">ATOM</h2>
+                <h2 id="m12">Home</h2>
+                <h2 id="m13">Contact Us</h2>
+                <h2 id="m14">About Us</h2>
+                <h2 id="m15">Log Out</h2>
+                </div>
+                <div class="details">
+                    <h1>FEEDBACK</h1>
+                    <input type="text" name="feedback" id="feedback">
+                    <h3 id="Fe1">Can't Emty</h3>
+                    <button id="btn2" name="btn2">Submit</button>
+                </div>
+            </div>
+        </div>
+    </div>
         </main>
         <script>
             var M1=document.getElementById("m1");
@@ -247,6 +337,11 @@
             var M8=document.getElementById("m8");
             var M9=document.getElementById("m9");
             var M10=document.getElementById("m10");
+            var M11=document.getElementById("m11");
+            var M12=document.getElementById("m12");
+            var M13=document.getElementById("m13");
+            var M14=document.getElementById("m14");
+            var M15=document.getElementById("m15");
             var E1=document.getElementById("e1");
             var E2=document.getElementById("e2");
             var E3=document.getElementById("e3");
@@ -254,8 +349,12 @@
             var E5=document.getElementById("e5");
             var E6=document.getElementById("e6");
             var BTN1=document.getElementById("btn1");
+            var BTN2=document.getElementById("btn2");
             var IE1=document.getElementById("Ie1");
             var IE2=document.getElementById("Ie2");
+            var FE=document.getElementById("Fe1");
+            var FD=document.getElementById("feedback");
+
 
             M1.onmousemove=function(){
                 M1.style.backgroundColor="var(--div-color5)";
@@ -317,11 +416,47 @@
              M10.onmouseleave=function(){
                 M10.style.backgroundColor="var(--div-color3)";
             }
+             M11.onmousemove=function(){
+                M11.style.backgroundColor="var(--div-color5)";
+            }
+             M11.onmouseleave=function(){
+                M11.style.backgroundColor="var(--div-color3)";
+            }
+             M12.onmousemove=function(){
+                M12.style.backgroundColor="var(--div-color5)";
+            }
+             M12.onmouseleave=function(){
+                M12.style.backgroundColor="var(--div-color3)";
+            }
+            M13.onmousemove=function(){
+                M13.style.backgroundColor="var(--div-color5)";
+            }
+             M13.onmouseleave=function(){
+                M13.style.backgroundColor="var(--div-color3)";
+            }
+            M14.onmousemove=function(){
+                M14.style.backgroundColor="var(--div-color5)";
+            }
+             M14.onmouseleave=function(){
+                M14.style.backgroundColor="var(--div-color3)";
+            }
+            M15.onmousemove=function(){
+                M15.style.backgroundColor="var(--div-color5)";
+            }
+             M15.onmouseleave=function(){
+                M15.style.backgroundColor="var(--div-color3)";
+            }
             BTN1.onmousemove=function(){
                 BTN1.style.backgroundColor="#FF8000";
             }
              BTN1.onmouseleave=function(){
                 BTN1.style.backgroundColor="white";
+            }
+             BTN2.onmousemove=function(){
+                BTN2.style.backgroundColor="#FF8000";
+            }
+             BTN2.onmouseleave=function(){
+                BTN2.style.backgroundColor="white";
             }
 
             BTN1.onclick = function() {
@@ -332,6 +467,11 @@
                     IE1.style.display = "block";
                 } else if (description.value == "") {
                     IE2.style.display = "block";
+                }
+            }
+            BTN2.onclick=function(){
+                if(FD.value==""){
+                    FE.style.display="block";
                 }
             }
 
