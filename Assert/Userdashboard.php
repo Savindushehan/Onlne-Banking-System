@@ -184,7 +184,7 @@
                 padding: 0;
             }
             .back3{
-                display: block;
+                display: none;
             }
             .background3{
                 display: flex;
@@ -242,6 +242,65 @@
                 margin-left: 0;
             }
          }
+
+          @media only screen and (min-width:1280px){
+            /* this s Bill payment page*/
+
+            body{
+                overflow: hidden;
+                margin: 0;
+                padding: 0;
+            }
+            img{
+                left: 35%;
+            }
+            .back4{
+                display: block;
+            }
+            .background4{
+                width: 100%;
+                height: 100vh;
+                display: flex;
+                flex-direction: column;
+                background-image: linear-gradient(var(--div-color1),var(--div-color3));
+
+            }
+            .details{
+                display: flex;
+                flex-direction: column;
+            }
+            .row1{
+                
+                width: 100%;
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+            }
+            h1{
+                margin-top: 0;
+                font-family: 'Roboto', sans-serif;
+                font-size: 40px;
+                padding-top: 5vh;
+                padding-bottom: 5vh;
+                background-color: #C1C8E4;
+                border-radius: 50%;
+                margin-left: 10vw;
+                margin-right: 10vw;
+                width: 12vw;
+                cursor: pointer;
+            }
+            #P4 , #P5{
+                margin-left: 15vw;
+                margin-right: 15vw;
+                padding-top: 5vh;
+                padding-bottom: 5vh;
+                width: 12vw;
+            }
+            #m16{
+                margin-left: 0;
+            }
+          }
 
         </style>
     </head>
@@ -325,6 +384,30 @@
             </div>
         </div>
     </div>
+    <div class="back4">
+        <div class="background4">
+            <img src="../Images in saly/Saly-19.png" alt="image">
+        <div class="menu">
+                <h2 id="m16">ATOM</h2>
+                <h2 id="m17">Home</h2>
+                <h2 id="m18">Contact Us</h2>
+                <h2 id="m19">About Us</h2>
+                <h2 id="m20">Log Out</h2>
+                </div>
+             <div class="details">
+                <div class="row1">
+                    <h1 id="P1">Internet <br> Bill</h1>
+                    <h1 id="P2">Phone <br> Bill</h1>
+                    <h1 id="P3">Water <br> Bill</h1>
+                </div>
+                <div class="row2">
+                    <h1 id="P4">Current <br> Bill</h1>
+                    <h1 id="P5">Insurence <br> Bill</h1>
+                </div>
+             </div>   
+        </div>
+    </div>
+
         </main>
         <script>
             var M1=document.getElementById("m1");
@@ -342,12 +425,22 @@
             var M13=document.getElementById("m13");
             var M14=document.getElementById("m14");
             var M15=document.getElementById("m15");
+            var M16=document.getElementById("m16");
+            var M17=document.getElementById("m17");
+            var M18=document.getElementById("m18");
+            var M19=document.getElementById("m19");
+            var M20=document.getElementById("m20");
             var E1=document.getElementById("e1");
             var E2=document.getElementById("e2");
             var E3=document.getElementById("e3");
             var E4=document.getElementById("e4");
             var E5=document.getElementById("e5");
             var E6=document.getElementById("e6");
+            var PP1=document.getElementById("P1");
+            var PP2=document.getElementById("P2");
+            var PP3=document.getElementById("P3");
+            var PP4=document.getElementById("P4");
+            var PP5=document.getElementById("P5");
             var BTN1=document.getElementById("btn1");
             var BTN2=document.getElementById("btn2");
             var IE1=document.getElementById("Ie1");
@@ -445,6 +538,66 @@
             }
              M15.onmouseleave=function(){
                 M15.style.backgroundColor="var(--div-color3)";
+            }
+            M16.onmousemove=function(){
+                M16.style.backgroundColor="var(--div-color5)";
+            }
+             M16.onmouseleave=function(){
+                M16.style.backgroundColor="var(--div-color1)";
+            }
+             M17.onmousemove=function(){
+                M17.style.backgroundColor="var(--div-color5)";
+            }
+             M17.onmouseleave=function(){
+                M17.style.backgroundColor="var(--div-color1)";
+            }
+             M18.onmousemove=function(){
+                M18.style.backgroundColor="var(--div-color5)";
+            }
+             M18.onmouseleave=function(){
+                M18.style.backgroundColor="var(--div-color1)";
+            }
+            M19.onmousemove=function(){
+                M19.style.backgroundColor="var(--div-color5)";
+            }
+             M19.onmouseleave=function(){
+                M19.style.backgroundColor="var(--div-color1)";
+            }
+            M20.onmousemove=function(){
+                M20.style.backgroundColor="var(--div-color5)";
+            }
+             M20.onmouseleave=function(){
+                M20.style.backgroundColor="var(--div-color1)";
+            }
+            PP1.onmousemove=function(){
+                PP1.style.backgroundColor="var(--div-color2)";
+            }
+             PP1.onmouseleave=function(){
+                PP1.style.backgroundColor="var(--div-color4)";
+            }
+             PP2.onmousemove=function(){
+                PP2.style.backgroundColor="var(--div-color2)";
+            }
+             PP2.onmouseleave=function(){
+                PP2.style.backgroundColor="var(--div-color4)";
+            }
+             PP3.onmousemove=function(){
+                PP3.style.backgroundColor="var(--div-color2)";
+            }
+             PP3.onmouseleave=function(){
+                PP3.style.backgroundColor="var(--div-color4)";
+            }
+            PP4.onmousemove=function(){
+                PP4.style.backgroundColor="var(--div-color2)";
+            }
+             PP4.onmouseleave=function(){
+                PP4.style.backgroundColor="var(--div-color4)";
+            }
+            PP5.onmousemove=function(){
+                PP5.style.backgroundColor="var(--div-color2)";
+            }
+             PP5.onmouseleave=function(){
+                PP5.style.backgroundColor="var(--div-color4)";
             }
             BTN1.onmousemove=function(){
                 BTN1.style.backgroundColor="#FF8000";
