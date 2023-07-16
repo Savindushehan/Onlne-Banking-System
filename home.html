@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>ATOM</title>
+        <style>
+              @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+            :root{
+                --div-color1:#5680E9;
+                --div-color2:#84CEEB;
+                --div-color3:#5AB9EA;
+                --div-color4:#C1C8E4;
+                --div-color5:#8860D0;
+            }
+         
+
+           @media only screen and (max-width: 1279px) {
+            body {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                width: 20rem;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+                margin-left: auto;
+                margin-right: auto;
+                margin-top: 10vh;
+                overflow-x: hidden;
+                background-color: white;
+                border-radius: 2vw;
+            }
+
+            main {
+                background-image: linear-gradient(var(--div-color2),var(--div-color4));
+                width: 20rem;
+                height: 80vh;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+            }
+
+            .menu {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+                width: 100%;
+            }
+
+            .menu h2 {
+                margin-top: 0;
+                display: none;
+                color: var(--div-color1);
+                font-size: 25px;
+                width: 20rem;
+                border-radius: 10px;
+                font-family: 'Roboto', sans-serif;
+                cursor: pointer;
+            }
+
+            .three {
+                position: absolute;
+                top: 10vh;
+                margin-top: 1rem;
+                display: flex;
+                flex-direction: column;
+                margin-left: 15rem;
+                cursor: pointer;
+                background-color: black;
+                border: none;
+            }
+
+            img {
+                width: 20rem;
+            }
+
+            h1 {
+                font-family: 'Roboto', sans-serif;
+                font-size: 2rem;
+                color: #8860D0;
+                animation: glowing 2s ease-in-out infinite;
+                border-radius: 1vw;
+                margin-bottom: 3vh;
+            }
+            h4{
+                text-align: right;
+                margin-top: 0;
+                margin-bottom: 5px;
+                width: 4rem;
+                height: 0.5rem;
+                background-color:var(--div-color4);
+            }
+
+            @keyframes glowing {
+                0% {
+                    box-shadow: 0 0 5px #e9098b;
+                }
+
+                50% {
+                    box-shadow: 0 0 20px #eb07a6;
+                }
+
+                100% {
+                    box-shadow: 0 0 5px #e20b6f;
+                }
+            }
+        }
+
+
+            @media only screen and (min-width:1280px){
+            body{
+                margin: 0;
+                padding: 0;
+                overflow: hidden;
+            }
+            img {
+                width: 100%;
+                height: 100vh;
+                transition: 0.3s;
+            }
+            .menu{
+                position: absolute;
+                margin-top: 2vh;
+                margin-bottom: 0;
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+                width: 100%;
+            }
+            .menu h2{
+                width: auto;
+                display: block;
+                color: var(--div-color3);
+                font-size: 30px;
+                border-radius: 16px;
+                margin-left: 8rem;
+                font-family: 'Roboto', sans-serif;
+                cursor: pointer;
+            }
+            #e1{
+                margin-left: 0;
+            }
+            h1{
+                font-family: 'Roboto', sans-serif;
+                font-size: 3rem;
+                position: absolute;
+                top: 40%;
+                left: 40%;
+                color: #8860D0;
+                animation: glowing 2s ease-in-out infinite;
+                border-radius: 1vw;
+            }
+            @keyframes glowing {
+            0% {
+                box-shadow: 0 0 5px #e9098b;
+            }
+
+            50% {
+                box-shadow: 0 0 20px #eb07a6;
+            }
+
+            100% {
+                box-shadow: 0 0 5px #e20b6f;
+            }
+        }
+        .three{
+            display: none;
+        }
+    }
+            
+        </style>
+    </head>
+    <body>
+        <main>
+            <div class="three" id="three">
+                <h4></h4>
+                <h4></h4>
+                <h4></h4>
+            </div>
+            <div class="menu">
+                <h2 id="e1">ATOM</h2>
+                <h2 id="e2">Contact Us</h2>
+                <h2 id="e3">About US</h2>
+                <h2 id="e4">Loging</h2>
+            </div>
+            <h1>ATOM BANK</h1>
+            <img src="" id="image">
+
+        </main>
+
+        <script>
+            var image = document.getElementById("image");
+            var images = ["Pic/image1.jpg", "Pic/image2.jpg", "Pic/image3.jpg", "Pic/image4.jpg", "Pic/image5.jpg"];
+            setInterval(function() {
+                var random = Math.floor(Math.random() * 5);
+                image.src = images[random];
+            }, 4000); // Change the interval time to 3000 milliseconds (3 seconds)
+
+
+            var E1=document.getElementById("e1");
+            var E2=document.getElementById("e2");
+            var E3=document.getElementById("e3");
+            var E4=document.getElementById("e4");
+            var B=document.getElementById("three");
+
+            E1.onmousemove=function(){
+                E1.style.backgroundColor="orange";
+            }
+             E1.onmouseleave=function(){
+                E1.style.backgroundColor="transparent";
+            }
+             E2.onmousemove=function(){
+                E2.style.backgroundColor="orange";
+            }
+             E2.onmouseleave=function(){
+                E2.style.backgroundColor="transparent";
+            }
+            E3.onmousemove=function(){
+                E3.style.backgroundColor="orange";
+            }
+             E3.onmouseleave=function(){
+                E3.style.backgroundColor="transparent";
+            }
+            E4.onmousemove=function(){
+                E4.style.backgroundColor="orange";
+            }
+             E4.onmouseleave=function(){
+                E4.style.backgroundColor="transparent";
+            }
+
+
+            B.onclick = function() {
+                if (E1.style.display === "none") {
+                E1.style.display = "block";
+                E2.style.display = "block";
+                E3.style.display = "block";
+                E4.style.display = "block";
+                } else {
+                E1.style.display = "none";
+                E2.style.display = "none";
+                E3.style.display = "none";
+                E4.style.display = "none";
+                }
+            }
+        </script>
+    </body>
+</html>
