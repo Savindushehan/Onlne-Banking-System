@@ -15,6 +15,9 @@
                 --div-color4:#C1C8E4;
                 --div-color5:#8860D0;
             }
+           a{
+                text-decoration: none;
+            }
             @media only screen and (max-width:1279px){
                 body{
                display: flex;
@@ -138,6 +141,13 @@
                 transition: 0.6s;
                 margin-bottom: 3rem;
             }
+            span{
+                margin-top: 10px;
+                color: var(--div-color5);
+                font-size: 20px;
+                font-family: 'Roboto', sans-serif;
+                cursor: pointer;
+            }
 
             }
             
@@ -243,6 +253,13 @@
             .three{
                 display: none;
             }
+            span{
+                margin-top: 10px;
+                color: var(--div-color5);
+                font-size: 25px;
+                font-family: 'Roboto', sans-serif;
+                cursor: pointer;
+            }
         }
 
         </style>
@@ -260,10 +277,10 @@
                     <h4></h4>
                 </div>
                     <div class="menu">
-                        <h2 id="m1">ATOM</h2>
-                        <h2 id="m2">Home</h2>
-                        <h2 id="m3">Contact Us</h2>
-                        <h2 id="m4">About Us</h2>
+                       <a href="../home.html"> <h2 id="m1">ATOM</h2></a>
+                       <a href="../Assert/Userdashboard.php"> <h2 id="m2">Home</h2></a>
+                        <a href="../Assert/Contact_us.html"><h2 id="m3">Contact Us</h2></a>
+                       <a href="../Assert/About_Us.html"> <h2 id="m4">About Us</h2></a>
                     </div>
                     <h1>Login</h1>
                     <form method="POST" action="login.php">
@@ -276,6 +293,7 @@
                             <label>Password</label>
                             <input type="text" name="password" id="pass">
                             <h3 id="e2">Can't empty password </h3>
+                            <a href="../Assert/Create_Account.php"><span>Don't have an account</span></a>
                         </div>
                         <button id="btn" type="button">Loging</button>
                     </form>
