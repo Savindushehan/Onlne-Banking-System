@@ -353,11 +353,11 @@
                 </div>
                 <div class="side2">
                 <div class="menu">
-                <h2 id="m1">ATOM</h2>
-                <h2 id="m2">Home</h2>
-                <h2 id="m3">Contact Us</h2>
-                <h2 id="m4">About Us</h2>
-                <h2 id="m5">Log Out</h2>
+                <a href="../home.html">  <h2 id="m1">ATOM</h2></a>
+                <a href="./Userdashboard.php"><h2 id="m2">Home</h2></a>
+                <a href="./Contact_us.html"><h2 id="m3">Contact Us</h2></a>
+                <a href="./About_Us.html"><h2 id="m4">About Us</h2></a>
+               <a href="../home.html"> <h2 id="m5">Log Out</h2></a>
                 </div>
                 <div class="details">
                     <h1>Inquiry</h1>
@@ -381,11 +381,11 @@
             </div>
             <div class="side2">
                 <div class="menu">
-                <h2 id="m11">ATOM</h2>
-                <h2 id="m12">Home</h2>
-                <h2 id="m13">Contact Us</h2>
-                <h2 id="m14">About Us</h2>
-                <h2 id="m15">Log Out</h2>
+                <a href="../home.html">  <h2 id="m11">ATOM</h2></a>
+                <a href="./Userdashboard.php"><h2 id="m12">Home</h2></a>
+                <a href="./Contact_us.html"><h2 id="m13">Contact Us</h2></a>
+                <a href="./About_Us.html"><h2 id="m14">About Us</h2></a>
+               <a href="../home.html"> <h2 id="m15">Log Out</h2></a>
                 </div>
                 <div class="details">
                     <h1>FEEDBACK</h1>
@@ -400,11 +400,11 @@
         <div class="background4">
             <img src="../Images in saly/Saly-19.png" alt="image">
         <div class="menu">
-                <h2 id="m16">ATOM</h2>
-                <h2 id="m17">Home</h2>
-                <h2 id="m18">Contact Us</h2>
-                <h2 id="m19">About Us</h2>
-                <h2 id="m20">Log Out</h2>
+        <a href="../home.html">  <h2 id="m16">ATOM</h2></a>
+                <a href="./Userdashboard.php"><h2 id="m17">Home</h2></a>
+                <a href="./Contact_us.html"><h2 id="m18">Contact Us</h2></a>
+                <a href="./About_Us.html"><h2 id="m19">About Us</h2></a>
+               <a href="../home.html"> <h2 id="m20">Log Out</h2></a>
                 </div>
              <div class="details">
                 <div class="row1">
