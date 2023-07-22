@@ -19,11 +19,22 @@
                 padding: 0;
                
             }
+            a{
+                text-decoration: none;
+            }
 
             @media only screen and (min-width:1280px){
                 /* this is userdashboad*/
+                body{
+                margin: 0;
+                padding: 0;
+                overflow: hidden;
+               
+            }    
            .back1{
-            display: none;
+            width: 100%;
+                height: 100vh;
+            display: block;
            }
             main{
                 width: 100%;
@@ -40,7 +51,7 @@
                 width: 30%;
                 background-image: linear-gradient(var(--div-color5),var(--div-color1));
             }
-            img{
+           .side1 img{
                 width: 30%;
                 position: absolute;
                 bottom: 0;
@@ -255,7 +266,7 @@
                 left: 35%;
             }
             .back4{
-                display: block;
+                display: none;
             }
             .background4{
                 width: 100%;
@@ -307,18 +318,18 @@
     </head>
     <body>
         <main>
-            <div class="back1">
+            <div class="back1" id="back1">
             <div class="background1">
         <div class="side1">
             <img src="../Images in saly/Saly-41.png" alt="image">
         </div>
             <div class="side2">
             <div class="menu">
-                <h2 id="m6">ATOM</h2>
-                <h2 id="m7">Home</h2>
-                <h2 id="m8">Contact Us</h2>
-                <h2 id="m9">About Us</h2>
-                <h2 id="m10">Log Out</h2>
+              <a href="../home.html">  <h2 id="m6">ATOM</h2></a>
+                <a href="./Userdashboard.php"><h2 id="m7">Home</h2></a>
+                <a href="./Contact_us.html"><h2 id="m8">Contact Us</h2></a>
+                <a href="./About_Us.html"><h2 id="m9">About Us</h2></a>
+               <a href="../home.html"> <h2 id="m10">Log Out</h2></a>
             </div>
             <div class="details">
                 <div class="row1">
@@ -335,7 +346,7 @@
             </div>
             </div>
     </div>
-            <div class="back2">
+            <div class="back2" id="back2">
             <div class="background2">
                 <div class="side1">
                     <img src="../Images in saly/Saly-9.png" alt="image">
@@ -363,7 +374,7 @@
                 </div>
             </div>
     </div>
-    <div class="back3">
+    <div class="back3" id="back3">
         <div class="background3">
             <div class="side1">
                 <img src="../Images in saly/Saly-25.png" alt="image">
@@ -385,7 +396,7 @@
             </div>
         </div>
     </div>
-    <div class="back4">
+    <div class="back4" id="back4">
         <div class="background4">
             <img src="../Images in saly/Saly-19.png" alt="image">
         <div class="menu">
@@ -448,6 +459,10 @@
             var IE2=document.getElementById("Ie2");
             var FE=document.getElementById("Fe1");
             var FD=document.getElementById("feedback");
+            var B1=document.getElementById("back1");
+            var B2=document.getElementById("back2");
+            var B3=document.getElementById("back3");
+            var B4=document.getElementById("back4");
 
 
             M1.onmousemove=function(){
@@ -664,6 +679,26 @@
             }
             E6.onmouseleave=function(){
                 E6.style.backgroundImage="linear-gradient(var(--div-color4),var(--div-color2))";
+            }
+
+
+            E5.onclick=function(){
+               B1.style.display="none";
+               B2.style.display="block";
+               B3.style.display="none";
+               B4.style.display="none"; 
+            }
+             E4.onclick=function(){
+               B1.style.display="none";
+               B2.style.display="none";
+               B3.style.display="block";
+               B4.style.display="none"; 
+            }
+             E3.onclick=function(){
+               B1.style.display="none";
+               B2.style.display="none";
+               B3.style.display="none";
+               B4.style.display="block"; 
             }
 
             </script>
