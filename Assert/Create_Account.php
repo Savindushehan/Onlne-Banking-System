@@ -283,12 +283,12 @@
                 </div>
                 <div class="menu">
                 <a href="../home.html"> <h2 id="m1">ATOM</h2></a>
-                       <a href="../Assert/Userdashboard.php"> <h2 id="m2">Home</h2></a>
+                <a href="../home.html"> <h2 id="m2">Home</h2></a>
                         <a href="../Assert/Contact_us.html"><h2 id="m3">Contact Us</h2></a>
                        <a href="../Assert/About_Us.html"> <h2 id="m4">About Us</h2></a>
                 </div>
                 <h1>Create Account</h1>
-                <form method="POST" action="Create_Account.php">
+                <form method="POST" action="Create.inc.php">
                     <div class="row1">
                         <div class="R1">
                             <label>Account Number</label>
@@ -318,8 +318,9 @@
                         <input type="text" name="phone" id="phone">
                         <h3 id="e5">Can't Empty phone</h3>
                     </div>
+                    <button id="btn" type="submit">Submit</button>
                 </form>
-                <button id="btn">Submit</button>
+               
             </div>
         </main>
         <script>

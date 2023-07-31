@@ -278,12 +278,12 @@
                 </div>
                     <div class="menu">
                        <a href="../home.html"> <h2 id="m1">ATOM</h2></a>
-                       <a href="../Assert/Userdashboard.php"> <h2 id="m2">Home</h2></a>
+                       <a href="../home.html"> <h2 id="m2">Home</h2></a>
                         <a href="../Assert/Contact_us.html"><h2 id="m3">Contact Us</h2></a>
                        <a href="../Assert/About_Us.html"> <h2 id="m4">About Us</h2></a>
                     </div>
                     <h1>Login</h1>
-                    <form method="POST" action="login.php">
+                    <form method="POST" action="login.inc.php">
                         <div class="row1">
                             <label>Username</label>
                             <input type="text" name="username" id="user">
@@ -291,11 +291,11 @@
                         </div>
                         <div class="row2">
                             <label>Password</label>
-                            <input type="text" name="password" id="pass">
+                            <input type="password" name="password" id="pass">
                             <h3 id="e2">Can't empty password </h3>
                             <a href="../Assert/Create_Account.php"><span>Don't have an account</span></a>
                         </div>
-                        <button id="btn" type="button">Loging</button>
+                        <button id="btn" type="submit">Loging</button>
                     </form>
                 </div>
             </div>
