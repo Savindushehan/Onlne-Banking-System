@@ -203,6 +203,9 @@
                 width: 100%;
                 height: 100vh;
             }
+            #Account11{
+                display: none;
+            }
             img{
                 width: 30%;
                 position: absolute;
@@ -397,6 +400,7 @@
                     <form method="POST" action="Feedback.php">
                     <h1>FEEDBACK</h1>
                     <input type="text" name="feedback" id="feedback">
+                    <input type="text" name="account" id="Account11">
                     <h3 id="Fe1">Can't Emty</h3>
                     <button id="btn2" name="btn2" type="submit">Submit</button>
                     </form>
